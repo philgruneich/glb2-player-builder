@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "express": "^4.16.3",
     "vue": "^2.1.10"
   },
   "devDependencies": {
@@ -54,7 +55,8 @@
     "serve": "gulp serve",
     "serve:dist": "gulp serve:dist",
     "test": "gulp test",
-    "test:auto": "gulp test:auto"
+    "test:auto": "gulp test:auto",
+    "start": "node server.js"
   },
   "eslintConfig": {
     "root": true,

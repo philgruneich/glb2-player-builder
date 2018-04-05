@@ -19,8 +19,7 @@ export const traits = {
     position_exclusions: ['QB', 'HB', 'FB', 'WR', 'TE', 'OT', 'G', 'C', 'LB', 'FS', 'SS', 'CB', 'K', 'P'],
     salary_modifier: 0,
     name: 'Quick Reaction',
-    description: `
-      This defender has a nose for the ball.
+    description: `This defender has a nose for the ball.
       Blitz Awareness: 5% lower SP cost, +3 max
       Tackling Tech: 5% lower SP cost, +3 max
       Pursuit: 4% lower SP cost, +3 max
@@ -306,8 +305,7 @@ export const traits = {
     position_descriptions: {},
     position_exclusions: [],
     name: 'Early Bloomer',
-    description: `
-      This player has lower potential but gets there easily.
+    description: `This player has lower potential but gets there easily.
       All Skills: 5% lower SP cost, -10 max`,
     conflicts: ['slow_built'],
     conflict_text: `
@@ -358,8 +356,7 @@ export const traits = {
     position_descriptions: {},
     position_exclusions: ['QB', 'HB', 'FB', 'WR', 'TE', 'OT', 'G', 'C', 'DT', 'DE', 'K', 'P'],
     name: 'Ball Hawk',
-    description: `
-      This defender is always looking for interceptions.
+    description: `This defender is always looking for interceptions.
       Min Salary: +8%`,
     conflicts: ['long_reach'],
     conflict_text: `
@@ -670,11 +667,9 @@ export const traits = {
     position_exclusions: [],
     salary_modifier: 0,
     name: 'Strong Base',
-    description: `
-      Fall once,
-      shame on me.\n\ t\ t\ t\ t\ t\ tBalance: 6 % lower SP cost,
-      +3 max\ n\ t\ t\ t\ t\ t\ tQuickness: 6 % higher SP cost,
-      -3 max
+    description: `Fall once, shame on me.
+      Balance: 6 % lower SP cost +3 max
+      Quickness: 6 % higher SP cost -3 max
     `
   },
   soft_hands: {
@@ -816,8 +811,7 @@ export const traits = {
     position_descriptions: {},
     position_exclusions: [],
     name: 'Fearsome',
-    description: `
-      It is much more secure to be feared than to be loved.
+    description: `It is much more secure to be feared than to be loved.
       Min Salary: +4%`,
     conflicts: ['easy_going'],
     conflict_text: `
@@ -948,8 +942,7 @@ export const traits = {
     position_descriptions: {},
     position_exclusions: ['HB', 'FB', 'WR', 'TE', 'OT', 'G', 'C', 'DT', 'DE', 'SS', 'FS', 'CB', 'LB', 'K', 'P'],
     name: 'Precision Passer',
-    description: `
-      This QB favors accuracy over arm strength.
+    description: `This QB favors accuracy over arm strength.
       Pass Accuracy: 10% lower SP cost, +6 max
       Pass Power: 10% higher SP cost, -6 max
       Min Salary: +8%`,

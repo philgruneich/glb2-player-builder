@@ -14,18 +14,18 @@
             {{selectedPosition}}
           </div>
           <div class="form-group">
-            <label for="weight">Weight</label>
-            <select name="weight" id="weight" v-model="selectedWeight" :disabled="!selectedPosition">
-              <option v-for="w in calculatedWeights" :value=w>
-                {{w}} lbs
-              </option>
-            </select>
-          </div>
-          <div class="form-group">
             <label for="height">Height</label>
             <select name="height" id="height" v-model="selectedHeight" :disabled="!selectedPosition">
               <option v-for="h in calculatedHeights" :value=h.value>
                 {{h.name}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="weight">Weight</label>
+            <select name="weight" id="weight" v-model="selectedWeight" :disabled="!selectedPosition || !selectedHeight">
+              <option v-for="w in calculatedWeights" :value=w>
+                {{w}} lbs
               </option>
             </select>
           </div>
@@ -57,12 +57,13 @@
             <input type="number" min="0" max="10" id="confidence" name="confidence" v-model="attributes.confidence" />
           </div>
         </div>
+        <a :href="linkToBuild">Share this player</a>
       </div>
       
       <div id="traits" v-show="positionData && selectedHeight && selectedWeight">
         Assign {{remainingTraits}} Traits to this Player.
         <div class="trait" v-for="trait in filteredTraits">
-          <label :title="trait.description">
+          <label :title="(selectedPosition in trait.position_descriptions ? trait.position_descriptions[selectedPosition]: trait.description)">
             <input type="checkbox" name="traits" :value="trait.id" v-model="selectedTraits" :disabled="selectedTraits.length >= maxTraits && selectedTraits.indexOf(trait.id) === -1 || blockedTraits.indexOf(trait.id) > -1" />
             {{trait.short_name || trait.name}} 
           </label>
@@ -73,6 +74,7 @@
         </skillbar>
       </div>
     </form>
+    
   </div>
   
 </template>
@@ -80,7 +82,7 @@
 <script>
 import { positions } from './Data/positions.js';
 import { heights } from './Data/heights.js';
-import { weights } from './Data/weights.js';
+// import { weights } from './Data/weights.js';
 import { traits } from './Data/traits.js';
 import { skills } from './Data/skills.js';
 import skillbar from './Components/Skillbar.vue'
@@ -91,7 +93,6 @@ export default {
     return {
       positions,
       heights,
-      weights,
       traits: Object.keys(traits).map(key => {
         let obj = traits[key];
         obj.id = key;
@@ -123,12 +124,67 @@ export default {
     getPositionData() {
       if (!this.selectedPosition) return this.positionData = null;
       this.positionData = this.positions.find(pos => pos.id === this.selectedPosition);
+    },
+
+    range(start, end) {
+      return Array(end - start + 1)
+        .fill()
+        .map((_, idx) => start + idx);
+    },
+
+    parseQueryParams(q) {
+      let query = q || location.search;
+
+      if (query) {
+        if (query.indexOf('?') === 0) {
+          query = query.substr(1);
+        }
+
+        return query.split('&').reduce((t, v) => {
+          let arr = v.split('=');
+          let key = decodeURIComponent(arr[0]);
+          let value = decodeURIComponent(arr[1]);
+
+          t[key] = value;
+          return t;
+        }, {});
+      }
+
+      return false;
+    },
+
+    convertToQueryParams(obj) {
+      return Object.keys(obj).reduce((t, v) => {
+        var query = encodeURIComponent(v) + '=' + encodeURIComponent(obj[v]);
+
+        if(t) {
+          query = '&' + query;
+        }
+
+        return (t + query);
+      }, '');
     }
+  },
+  created() {
+    const queryParams = this.parseQueryParams() || {};
+    if ('p' in queryParams) this.selectedPosition = queryParams.p || this.selectedPosition;
+    if ('st' in queryParams) this.attributes.strength = queryParams.st || this.attributes.strength
+    if ('ag' in queryParams) this.attributes.agility = queryParams.ag || this.attributes.agility
+    if ('aw' in queryParams) this.attributes.awareness = queryParams.aw || this.attributes.awareness
+    if ('sp' in queryParams) this.attributes.speed = queryParams.sp || this.attributes.speed
+    if ('sta' in queryParams) this.attributes.stamina = queryParams.sta || this.attributes.stamina
+    if ('co' in queryParams) this.attributes.confidence = queryParams.co || this.attributes.confidence
+    if ('h' in queryParams) this.selectedHeight = queryParams.h || this.selectedHeight;
+    if ('w' in queryParams) this.selectedWeight = queryParams.w || this.selectedWeight;
+    if ('t' in queryParams) this.selectedTraits = (queryParams.t.length ? queryParams.t.split(',') : this.selectedTraits);
+    return this.getPositionData();
   },
   computed: {
     calculatedWeights() {
-      if (!this.positionData) return this.weights;
-      return this.weights.filter(w => w <= this.positionData.maxWeight && w >= this.positionData.minWeight);
+      if (!this.positionData || !this.selectedHeight) return [];
+      const minWeight = this.positionData.minWeight + (this.positionData.weightModifier * (this.selectedHeight - this.positionData.minHeight));
+      const maxWeight = this.positionData.maxWeight + (this.positionData.weightModifier * (this.selectedHeight - this.positionData.minHeight));
+      return this.range(minWeight, maxWeight);
     },
     calculatedHeights() {
       if (!this.positionData) return this.heights;
@@ -150,6 +206,23 @@ export default {
       });
 
       return [...new Set([].concat(...conflicted))];
+    },
+    linkToBuild() {
+      let params = {}
+      if (+this.attributes.strength !== 5) params.st = this.attributes.strength;
+      if (+this.attributes.agility !== 5) params.ag = this.attributes.agility;
+      if (+this.attributes.awareness !== 5) params.aw = this.attributes.awareness;
+      if (+this.attributes.speed !== 5) params.sp = this.attributes.speed;
+      if (+this.attributes.stamina !== 5) params.sta = this.attributes.stamina;
+      if (+this.attributes.confidence !== 5) params.co = this.attributes.confidence;
+      if (this.selectedPosition) params.p = this.selectedPosition;
+      if (this.selectedHeight) params.h = this.selectedHeight;
+      if (this.selectedWeight) params.w = this.selectedWeight;
+      if (this.selectedTraits.length) params.t = this.selectedTraits.join();
+
+      let data = this.convertToQueryParams(params);
+
+      return '//' + location.host + location.pathname + '?' + data;
     },
     filteredSkills() {
       if (!this.positionData) return [];
@@ -218,5 +291,10 @@ export default {
     flex-basis: 50%;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  a {
+    display: block;
+    margin-top: 3em;
   }
 </style>

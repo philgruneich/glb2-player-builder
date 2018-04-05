@@ -6,8 +6,9 @@ export const positions = [
     // QB: 201 - 241
     minHeight: 70,
     maxHeight: 78,
-    minWeight: 201,
-    maxWeight: 241
+    minWeight: 165,
+    maxWeight: 205,
+    weightModifier: 6
   },
   {
     id: 'HB',
@@ -16,8 +17,9 @@ export const positions = [
     // HB: 208 - 248
     minHeight: 66,
     maxHeight: 76,
-    minWeight: 208,
-    maxWeight: 248
+    minWeight: 180,
+    maxWeight: 220,
+    weightModifier: 4
   },
   {
     id: 'FB',
@@ -26,8 +28,9 @@ export const positions = [
     // FB: 226 - 256
     minHeight: 70,
     maxHeight: 76,
-    minWeight: 226,
-    maxWeight: 256
+    minWeight: 220,
+    maxWeight: 250,
+    weightModifier: 2
   },
   {
     id: 'WR',
@@ -36,8 +39,9 @@ export const positions = [
     // WR: 195 - 235
     minHeight: 68,
     maxHeight: 78,
-    minWeight: 195,
-    maxWeight: 235
+    minWeight: 165,
+    maxWeight: 205,
+    weightModifier: 3
   },
   {
     id: 'TE',
@@ -46,8 +50,9 @@ export const positions = [
     // TE: 240 - 270
     minHeight: 72,
     maxHeight: 80,
-    minWeight: 240,
-    maxWeight: 270
+    minWeight: 230,
+    maxWeight: 260,
+    weightModifier: 2
   },
   {
     id: 'OT',
@@ -56,8 +61,9 @@ export const positions = [
     // OT: 296 - 336
     minHeight: 74,
     maxHeight: 81,
-    minWeight: 296,
-    maxWeight: 336
+    minWeight: 280,
+    maxWeight: 320,
+    weightModifier: 4
   },
   {
     id: 'G',
@@ -66,8 +72,9 @@ export const positions = [
     // G:  296 - 331
     minHeight: 74,
     maxHeight: 79,
-    minWeight: 296,
-    maxWeight: 331
+    minWeight: 290,
+    maxWeight: 325,
+    weightModifier: 6
   },
   {
     id: 'C',
@@ -76,8 +83,9 @@ export const positions = [
     // C:  250 - 320
     minHeight: 72,
     maxHeight: 78,
-    minWeight: 250,
-    maxWeight: 320
+    minWeight: 230,
+    maxWeight: 300,
+    weightModifier: 5
   },
   {
     id: 'K',
@@ -86,8 +94,9 @@ export const positions = [
     // K:  172 - 222
     minHeight: 69,
     maxHeight: 77,
-    minWeight: 172,
-    maxWeight: 222
+    minWeight: 170,
+    maxWeight: 220,
+    weightModifier: 1
   },
   {
     id: 'CB',
@@ -96,8 +105,9 @@ export const positions = [
     // CB: 184 - 214
     minHeight: 68,
     maxHeight: 75,
-    minWeight: 184,
-    maxWeight: 214
+    minWeight: 170,
+    maxWeight: 200,
+    weightModifier: 2
   },
   {
     id: 'LB',
@@ -106,8 +116,9 @@ export const positions = [
     // LB: 224 - 254
     minHeight: 70,
     maxHeight: 78,
-    minWeight: 224,
-    maxWeight: 254
+    minWeight: 220,
+    maxWeight: 250,
+    weightModifier: 2
   },
   {
     id: 'SS',
@@ -116,8 +127,9 @@ export const positions = [
     // SS: 199 - 229
     minHeight: 69,
     maxHeight: 77,
-    minWeight: 199,
-    maxWeight: 229
+    minWeight: 195,
+    maxWeight: 225,
+    weightModifier: 1
   },
   {
     id: 'FS',
@@ -126,8 +138,9 @@ export const positions = [
     // FS: 187 - 207
     minHeight: 68,
     maxHeight: 76,
-    minWeight: 187,
-    maxWeight: 207
+    minWeight: 185,
+    maxWeight: 205,
+    weightModifier: 2
   },
   {
     id: 'DT',
@@ -136,18 +149,20 @@ export const positions = [
     // DT: 314 - 364
     minHeight: 72,
     maxHeight: 80,
-    minWeight: 314,
-    maxWeight: 364
+    minWeight: 250,
+    maxWeight: 300,
+    weightModifier: 8
   },
   {
     id: 'DE',
-    name: 'Defensive Edge',
+    name: 'Defensive End',
     // DE: 5'11 - 6'8"
     // DE: 270 - 310
     minHeight: 71,
     maxHeight: 80,
-    minWeight: 270,
-    maxWeight: 310
+    minWeight: 240,
+    maxWeight: 280,
+    weightModifier: 5
   },
   {
     id: 'P',
@@ -156,7 +171,8 @@ export const positions = [
     // P:  5'11 - 6'5"
     minHeight: 71,
     maxHeight: 77,
-    minWeight: 204,
-    maxWeight: 254
+    minWeight: 180,
+    maxWeight: 230,
+    weightModifier: 4
   }
 ];
