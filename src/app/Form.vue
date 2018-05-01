@@ -169,6 +169,10 @@ export default {
   methods: {
     getPositionData() {
       if (!this.selectedPosition) return this.positionData = null;
+      this.currentLevel = 0;
+      this.currentSpBoost = 0;
+      this.spentSkillpoints = 0;
+      this.skills.forEach(skill => skill.level = 0);
       this.positionData = this.positions.find(pos => pos.id === this.selectedPosition);
     },
 
