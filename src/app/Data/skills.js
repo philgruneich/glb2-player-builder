@@ -12,6 +12,7 @@ export const skills = {
     "positions": ["P"],
     "weight": -0.025,
     "base_price": 4,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -41,6 +42,7 @@ export const skills = {
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": -0.025,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1.25,
@@ -63,6 +65,7 @@ export const skills = {
     "positions": ["QB"],
     "weight": 0,
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1,
@@ -96,6 +99,7 @@ export const skills = {
     "weight": 0,
     "positions": ["FB", "HB", "TE", "WR", "OT", "G", "C"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -121,6 +125,7 @@ export const skills = {
     "positions": ["LB", "CB", "FS", "SS"],
     "weight": 0.025,
     "base_price": 3,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1,
@@ -148,6 +153,7 @@ export const skills = {
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS"],
     "weight": -0.05,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": -0.25,
       "awareness": 0,
@@ -173,6 +179,7 @@ export const skills = {
     "positions": ["FB", "HB", "TE", "WR"],
     "weight": 0.025,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.5,
@@ -199,6 +206,7 @@ export const skills = {
     "weight": 0,
     "positions": ["FB", "HB", "TE", "WR"],
     "base_price": 1.25,
+    "level": 0,
     "attributes": {
       "stamina": -0.3,
       "awareness": 0,
@@ -236,6 +244,7 @@ export const skills = {
     "positions": ["FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0,
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": -0.1,
       "awareness": -2.9,
@@ -269,6 +278,7 @@ export const skills = {
     "weight": 0,
     "positions": ["FB", "HB", "TE", "WR", "OT", "G", "C"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -301,6 +311,7 @@ export const skills = {
     "weight": 0,
     "positions": ["FB", "HB", "TE", "OT", "G", "C"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -338,6 +349,7 @@ export const skills = {
     "positions": ["FB", "HB", "TE", "WR", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0.025,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0.25,
@@ -360,6 +372,7 @@ export const skills = {
     "positions": ["K"],
     "weight": 0,
     "base_price": 3,
+    "level": 0,
     "attributes": {
       "stamina": -0.3,
       "awareness": 0,
@@ -383,6 +396,7 @@ export const skills = {
     "weight": 0.05,
     "positions": ["QB"],
     "base_price": 1.5,
+    "level": 0,
     "attributes": {
       "stamina": -0.1,
       "awareness": -0.8,
@@ -420,6 +434,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": -0.05,
     "base_price": 1.25,
+    "level": 0,
     "attributes": {
       "stamina": -1,
       "awareness": 0,
@@ -442,6 +457,7 @@ export const skills = {
     "positions": ["QB"],
     "weight": 0,
     "base_price": 3.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1,
@@ -464,6 +480,7 @@ export const skills = {
     "positions": ["K"],
     "weight": -0.025,
     "base_price": 4,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -486,6 +503,7 @@ export const skills = {
     "positions": ["QB"],
     "weight": 0,
     "base_price": 2.5,
+    "level": 0,
     "attributes": {
       "stamina": -0.25,
       "awareness": 0,
@@ -513,6 +531,7 @@ export const skills = {
     "weight": 0,
     "positions": ["QB", "FB", "HB", "TE", "WR"],
     "base_price": 1.1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -538,6 +557,7 @@ export const skills = {
     "positions": ["FB", "HB", "TE", "WR"],
     "weight": 0.025,
     "base_price": 1.25,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1.5,
@@ -560,6 +580,7 @@ export const skills = {
     "positions": ["P"],
     "weight": 0,
     "base_price": 3,
+    "level": 0,
     "attributes": {
       "stamina": -0.3,
       "awareness": 0,
@@ -588,6 +609,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR"],
     "weight": -0.01,
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": -0.25,
       "awareness": -0.25,
@@ -614,6 +636,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR"],
     "weight": 0.06,
     "base_price": 3.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.8,
@@ -642,6 +665,7 @@ export const skills = {
     "weight": 0,
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -675,6 +699,7 @@ export const skills = {
     "weight": -0.025,
     "positions": ["FB", "HB", "TE", "WR", "OT", "G", "C"],
     "base_price": 2.5,
+    "level": 0,
     "attributes": {
       "stamina": -0.25,
       "awareness": 0,
@@ -704,6 +729,7 @@ export const skills = {
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": -0.05,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -736,6 +762,7 @@ export const skills = {
     "weight": 0.025,
     "positions": ["FB", "HB", "TE", "OT", "G", "C"],
     "base_price": 2.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.5,
@@ -765,6 +792,7 @@ export const skills = {
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0,
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -2.7,
@@ -793,6 +821,7 @@ export const skills = {
     "weight": 0.025,
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS"],
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.35,
@@ -830,6 +859,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0.05,
     "base_price": 1.25,
+    "level": 0,
     "attributes": {
       "stamina": -2.9,
       "awareness": 0,
@@ -860,6 +890,7 @@ export const skills = {
     "weight": 0.05,
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": -0.25,
       "awareness": -0.5,
@@ -885,6 +916,7 @@ export const skills = {
     "positions": ["FB", "HB", "TE", "WR"],
     "weight": 0.025,
     "base_price": 1.75,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1,
@@ -910,6 +942,7 @@ export const skills = {
     "positions": ["FB", "HB", "TE", "WR"],
     "weight": -0.05,
     "base_price": 1.75,
+    "level": 0,
     "attributes": {
       "stamina": -0.25,
       "awareness": -0.25,
@@ -939,6 +972,7 @@ export const skills = {
     "weight": 0,
     "positions": ["FB", "HB", "TE", "WR", "CB", "FS", "SS"],
     "base_price": 1.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -965,6 +999,7 @@ export const skills = {
     "weight": 0,
     "positions": ["LB", "CB", "FS", "SS"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -987,6 +1022,7 @@ export const skills = {
     "positions": ["QB"],
     "weight": 0,
     "base_price": 2.5,
+    "level": 0,
     "attributes": {
       "stamina": -0.3,
       "awareness": 0,
@@ -1024,6 +1060,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0.025,
     "base_price": 2.25,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.25,
@@ -1046,6 +1083,7 @@ export const skills = {
     "positions": ["P"],
     "weight": 0,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1.75,
@@ -1083,6 +1121,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": -0.05,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": -0.5,
       "awareness": 0,
@@ -1109,6 +1148,7 @@ export const skills = {
     "weight": 0,
     "positions": ["LB", "CB", "FS", "SS"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -1131,6 +1171,7 @@ export const skills = {
     "positions": ["QB"],
     "weight": 0,
     "base_price": 3.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1159,6 +1200,7 @@ export const skills = {
     "weight": 0.025,
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS"],
     "base_price": 1.75,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -2,
@@ -1196,6 +1238,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0.05,
     "base_price": 3.2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1233,6 +1276,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": -0.05,
     "base_price": 1.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1270,6 +1314,7 @@ export const skills = {
     "positions": ["FB", "HB", "TE", "WR", "DT", "DE", "LB", "CB", "FS", "SS"],
     "weight": 0.03,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1292,6 +1337,7 @@ export const skills = {
     "positions": ["QB"],
     "weight": -0.025,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": -0.5,
       "awareness": 0,
@@ -1314,6 +1360,7 @@ export const skills = {
     "positions": ["P"],
     "weight": 0.025,
     "base_price": 4,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1,
@@ -1341,6 +1388,7 @@ export const skills = {
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS"],
     "weight": -0.025,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1363,6 +1411,7 @@ export const skills = {
     "positions": ["K"],
     "weight": -0.025,
     "base_price": 2.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1386,6 +1435,7 @@ export const skills = {
     "weight": 0,
     "positions": ["QB"],
     "base_price": 2.75,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -1414,6 +1464,7 @@ export const skills = {
     "weight": 0,
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS"],
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -1440,6 +1491,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR"],
     "weight": -0.05,
     "base_price": 4.25,
+    "level": 0,
     "attributes": {
       "stamina": -0.5,
       "awareness": 0,
@@ -1472,6 +1524,7 @@ export const skills = {
     "weight": -0.025,
     "positions": ["FB", "HB", "TE", "OT", "G", "C"],
     "base_price": 2.5,
+    "level": 0,
     "attributes": {
       "stamina": -0.5,
       "awareness": 0,
@@ -1498,6 +1551,7 @@ export const skills = {
     "weight": 0,
     "positions": ["FB", "HB", "TE", "WR"],
     "base_price": 1.25,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -3,
@@ -1520,6 +1574,7 @@ export const skills = {
     "positions": ["K"],
     "weight": 0.025,
     "base_price": 4,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -1,
@@ -1542,6 +1597,7 @@ export const skills = {
     "positions": ["QB"],
     "weight": -0.025,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": -0.4,
       "awareness": -0.1,
@@ -1575,6 +1631,7 @@ export const skills = {
     "weight": 0.025,
     "positions": ["FB", "HB", "TE", "WR", "OT", "G", "C"],
     "base_price": 2.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.25,
@@ -1612,6 +1669,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1638,6 +1696,7 @@ export const skills = {
     "weight": -0.05,
     "positions": ["FB", "HB", "TE", "WR"],
     "base_price": 1.75,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.25,
@@ -1664,6 +1723,7 @@ export const skills = {
     "weight": 0.05,
     "positions": ["LB", "CB", "FS", "SS"],
     "base_price": 1.5,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.5,
@@ -1695,6 +1755,7 @@ export const skills = {
     "weight": 0,
     "positions": ["FB", "HB", "TE", "OT", "G"],
     "base_price": 1.3,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -2.5,
@@ -1724,6 +1785,7 @@ export const skills = {
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0.025,
     "base_price": 1,
+    "level": 0,
     "attributes": {
       "stamina": -0.25,
       "awareness": 0,
@@ -1761,6 +1823,7 @@ export const skills = {
     "positions": ["QB", "FB", "HB", "TE", "WR", "OT", "G", "C", "DT", "DE", "LB", "CB", "FS", "SS", "K", "P"],
     "weight": 0.05,
     "base_price": 3.4,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": 0,
@@ -1789,6 +1852,7 @@ export const skills = {
     "weight": 0.05,
     "positions": ["DT", "DE", "LB", "CB", "FS", "SS"],
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.3,
@@ -1814,6 +1878,7 @@ export const skills = {
     "positions": ["LB", "CB", "FS", "SS"],
     "weight": 0.025,
     "base_price": 2,
+    "level": 0,
     "attributes": {
       "stamina": 0,
       "awareness": -0.75,
