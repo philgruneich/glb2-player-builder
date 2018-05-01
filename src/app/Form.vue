@@ -88,7 +88,7 @@
               <button type="button" aria-label="Decrement" @click="--currentSpBoost" :disabled="currentSpBoost === 0">&minus;</button>
               <output class="form__output">{{currentSpBoost}}</output>
               <button type="button" aria-label="Increment" @click="++currentSpBoost" :disabled="currentSpBoost === spboosts.length - 1 || currentSpBoost >= maxSpBoost">&plus;</button>
-              <button type="button" aria-label="Maximum" @click="currentSpBoost = spboosts.length - 1" :disabled="currentSpBoost === spboosts.length - 1 || currentSpBoost >= maxSpBoost">&gt;</button>
+              <button type="button" aria-label="Maximum" @click="currentSpBoost = maxSpBoost" :disabled="currentSpBoost === spboosts.length - 1 || currentSpBoost >= maxSpBoost">&gt;</button>
             </div>
           </div>
           <div class="form__group">
@@ -240,12 +240,6 @@ export default {
 
       skill.level += levels;
       this.spentSkillpoints += skillpointsToSpend;
-
-      // console.log(skill.cost, this.skillPointsAvailable, skill.level, skill.min, skill.max);
-      // while (skill.cost <= this.skillPointsAvailable && this.skillPointsAvailable > 0 && skill.level + skill.min < skill.max) {
-      //   console.log(skill.cost, this.skillPointsAvailable, skill.level, skill.min, skill.max);
-      //   this.incrementSkill(skill);
-      // }
     },
 
     minSkill(skill) {
