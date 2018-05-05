@@ -2,9 +2,11 @@
 var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
+var chew = require('chewit');
 
 app = express();
-app.use(serveStatic(__dirname + "/dist"));
+app.use(serveStatic(__dirname + '/dist'));
+app.use(chew('5aecac68493f99073a2ae03b'));
 var port = process.env.PORT || 5000;
 app.listen(port);
 console.log('server started '+ port);
