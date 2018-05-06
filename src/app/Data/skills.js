@@ -116,10 +116,10 @@ export const skills = {
     "height": -0.25,
     "group": "Pass Coverage",
     "position_multiplier": {
-      "LB": 130,
+      "LB": 115,
       "FS": 100,
-      "CB": 110,
-      "SS": 120
+      "CB": 100,
+      "SS": 110
     },
     "desc": "The ability to catch incoming passes, causing a turnover.",
     "positions": ["LB", "CB", "FS", "SS"],

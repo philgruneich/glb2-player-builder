@@ -228,28 +228,49 @@ export default {
 
     maxSkill(skill) {
       let levels = 0;
-      let skillpointsToSpend = 0;
+      let skillPointsToSpend = 0;
       let proceed = true;
 
-      while (skillpointsToSpend < this.skillPointsAvailable && (levels + skill.level + skill.min) < skill.max && proceed) {
+      while (skillPointsToSpend < this.skillPointsAvailable && (levels + skill.level + skill.min) < skill.max && proceed) {
         let cost = this.calculateSkillCost(skill, skill.level + skill.min + levels);
 
-        if (cost + skillpointsToSpend > this.skillPointsAvailable) {
+        if (cost + skillPointsToSpend > this.skillPointsAvailable) {
           proceed = false;
         } else {
-          skillpointsToSpend += cost;
+          skillPointsToSpend += cost;
           ++levels;
         }
       }
 
       skill.level += levels;
-      this.spentSkillpoints += skillpointsToSpend;
+      this.spentSkillpoints += skillPointsToSpend;
     },
 
     minSkill(skill) {
       while (skill.level > 0) {
         this.decrementSkill(skill);
       }
+    },
+
+    raiseSkillToLevel(skill, level=0) {
+      let currentSkillLevel = skill.level;
+      let skillPointsToSpend = 0;
+      let upgradedLevels = 0;
+      let proceed = true;
+
+      while (skillPointsToSpend < this.skillPointsAvailable && upgradedLevels < level && (upgradedLevels + currentSkillLevel + skill.min) < skill.max && proceed) {
+        let cost = this.calculateSkillCost(skill, currentSkillLevel + skill.min + upgradedLevels);
+
+        if (cost + skillPointsToSpend > this.skillPointsAvailable) {
+          proceed = false;
+        } else {
+          skillPointsToSpend += cost;
+          ++upgradedLevels;
+        }
+      }
+
+      skill.level += upgradedLevels;
+      this.spentSkillpoints += skillPointsToSpend;
     },
 
     calculateSkillMaximum(skill) {
@@ -336,14 +357,16 @@ export default {
     if ('w' in queryParams) this.selectedWeight = queryParams.w || this.selectedWeight;
     if ('t' in queryParams) this.selectedTraits = (queryParams.t.length ? queryParams.t.split(',') : this.selectedTraits);
     this.getPositionData();
-    if ('l' in queryParams) this.currentLevel = queryParams.l || 0;
-    if ('spb' in queryParams) this.currentSpBoost = queryParams.spb || 0;
-    // if ('s' in queryParams && queryParams.s.length) {
-    //   let skills = queryParams.s.split(',');
-    //   this.filteredSkills.forEach((skill, i) => {
-    //     skill.level = +skills[i];
-    //   });
-    // }
+    if ('l' in queryParams) this.currentLevel = +queryParams.l || 0;
+    if ('spb' in queryParams) this.currentSpBoost = +queryParams.spb || 0;
+    if ('s' in queryParams && queryParams.s.length) {
+      let skills = queryParams.s.split('.');
+      this.filteredSkills.forEach((skill, i) => {
+        // console.log(skill);
+        this.raiseSkillToLevel(skill, +skills[i]);
+        // skill.level = +skills[i];
+      });
+    }
   },
   computed: {
     calculatedWeights() {
@@ -387,7 +410,7 @@ export default {
       if (this.selectedTraits.length) params.t = this.selectedTraits.join();
       if (+this.currentLevel) params.l = this.currentLevel;
       if (+this.currentSpBoost) params.spb = this.currentSpBoost;
-      // params.s = this.filteredSkills.map(skill => skill.level).join();
+      params.s = this.filteredSkills.map(skill => skill.level).join('.');
 
       let data = this.convertToQueryParams(params);
 

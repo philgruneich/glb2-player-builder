@@ -73,6 +73,6 @@ module.exports = {
   },
   entry: {
     app: `./${conf.path.src('index')}`,
-    vendor: Object.keys(pkg.dependencies).filter(dep => dep != 'express')
+    vendor: Object.keys(pkg.dependencies).filter(dep => dep != 'express' && dep != 'chewit')
   }
 };
